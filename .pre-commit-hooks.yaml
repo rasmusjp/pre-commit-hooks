@@ -1,0 +1,8 @@
+---
+- id: encrypt-sops-files
+  name: check and encrypt unencrypted files
+  description: checks and encrypts files containing unencrypted data
+  entry: encrypt-sops-files.sh
+  language: script
+  types: [file]
+  files: (^|/).+\.encrypted$

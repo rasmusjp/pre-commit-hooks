@@ -1,0 +1,17 @@
+---
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.4.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+- repo: https://github.com/Lucas-C/pre-commit-hooks
+  rev: v1.4.2
+  hooks:
+  - id: forbid-crlf
+  - id: remove-crlf
+- repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
+  rev: 0.2.2
+  hooks:
+  - id: yamlfmt
+    args: [--mapping, '2', --sequence, '2', --offset, '0', --width, '80']
