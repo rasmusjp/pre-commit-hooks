@@ -5,4 +5,4 @@
   entry: encrypt-sops-files.sh
   language: script
   types: [file]
-  files: (^|/).+\.encrypted$
+  files: (^|/).+\.(encrypted|sops(\..+)?)$
