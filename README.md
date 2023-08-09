@@ -6,7 +6,7 @@ A collection of git [pre-commit](https://pre-commit.com/) hooks I use in my own 
 
 ```yaml
 - repo: https://github.com/rasmusjp/pre-commit-hooks
-  rev: v0.1.0
+  rev: v0.3.0
   hooks:
   # - id: ...
 ```
@@ -14,6 +14,6 @@ A collection of git [pre-commit](https://pre-commit.com/) hooks I use in my own 
 
 ### encrypt-sops-files
 
-Encrypts unencrypted files with the `.encrypted` file extension.
+Encrypts unencrypted files with the `.encrypted` or `.sops(.*)` file extensions.
 
 Requires the [sops](https://github.com/getsops/sops) executable to be available in `PATH`.
