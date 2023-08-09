@@ -4,7 +4,7 @@ EXIT_CODE=0
 
 for file in "$@"; do
 	if [[ -f "$file" ]]; then
-		if ! grep -q '"ENC\[[A-Z0-9_]*,data:.*,type:.*\]"' "$file"; then
+		if ! grep -q 'ENC\[[A-Z0-9_]*,data:.*,type:.*\]' "$file"; then
 			echo "File $file is not encrypted, encrypting..."
 			if [[ "$file" =~ \.yaml ]]; then
 				sops --encrypt --in-place --input-type=yaml "$file"
